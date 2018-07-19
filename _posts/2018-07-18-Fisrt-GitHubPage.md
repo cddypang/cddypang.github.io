@@ -5,9 +5,9 @@ subtitle:    "\"First blog on GitHub Page\""
 date:       2018-07-18
 author:     PGJ
 header-img: img/post-bg-2015.jpg
-catalog: true
+catalog: false
 tags:
-    - 生活
+    - Blog
 ---
 
 > “🙉🙉🙉 ”
