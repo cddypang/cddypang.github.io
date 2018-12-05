@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Hello GitHub Page
+title:      kaldi-learn-egs01-yesno
 subtitle:    ""
 date:       2018-12-05
 author:     PGJ
