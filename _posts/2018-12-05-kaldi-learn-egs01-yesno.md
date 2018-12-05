@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      kaldi-learn-egs01-yesno
-subtitle:    ""
+subtitle:    
 date:       2018-12-05
 author:     PGJ
 header-img: img/post-bg-2015.jpg
