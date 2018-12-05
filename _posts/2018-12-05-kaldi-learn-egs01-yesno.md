@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      Hello GitHub Page
-subtitle:    "\"First blog on GitHub Page\""
-date:       2018-07-18
+subtitle:    ""
+date:       2018-12-05
 author:     PGJ
 header-img: img/post-bg-2015.jpg
 catalog: false
 tags:
-    - Blog
+    - kaldi
 ---
 
 --运行yesno例子
