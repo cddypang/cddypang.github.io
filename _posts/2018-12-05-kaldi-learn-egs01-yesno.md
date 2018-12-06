@@ -87,4 +87,4 @@ optional_silence.txt -- 包含一个单独音素作为字典中默认的静音�
 
 extra_questions.txt -- (用于构建决策树的问题集，可以为空)包含多组的音素，每一组音素包含相同的重音或音调；也有可能是一致表示非语音的静音/噪音音素。这可以用于增加自动生成问题的数量。(注意：在自动生成问题的程序对包含重音/声调的音素的处理方式跟普通音素处理方式一样，实际上程序并不知道哪些是带重音/声调的音素，它只是将这些音素当成普通的音素进行单独处理。)
 
-![07](img/kaldi-learn/kaldi-prepare_lang_sh-description-07.jpg)
+![07](../img/kaldi-learn/kaldi-prepare_lang_sh-description-07.jpg)
