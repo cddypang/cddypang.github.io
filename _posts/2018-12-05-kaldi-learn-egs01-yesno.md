@@ -10,17 +10,17 @@ tags:
     - kaldi
 ---
 
---运行yesno例子
+**运行yesno例子**
 
-0. 说明
+##### 0. 说明
 egs/yesno/s5目录下run.sh为示例运行总脚本，本文档记录对此脚本拆解运行的详细过程。
 
-1. 下载并解压数据
+##### 1. 下载并解压数据
 wget http://www.openslr.org/resources/1/waves_yesno.tar.gz
 
 解压数据至 egs/yesno/s5目录。
 
-2. 准备训练与测试数据
+##### 2. 准备训练与测试数据
 
 $sh local/prepare_data.sh waves_yesno
 
@@ -51,7 +51,7 @@ utt2spk -- 指明某段发音是哪个人说的（注意一点，说话人编号
 
 spk2utt -- 与utt2spk内容相同，关系反向，表明说话人编号与音频文件列表的关系
 
-3. 准备字典数据
+##### 3. 准备字典数据
 
 $sh local/prepare_dict.sh
 
@@ -67,6 +67,6 @@ silence_phones.txt -- 静音音素。写入sil
 
 optional_silence.txt -- 可选静音音素。写入sil
 
-4. 
+##### 4. 
 
 $utils/prepare_lang.sh --position-dependent-phones false data/local/dict "<SIL>" data/local/lang data/lang
