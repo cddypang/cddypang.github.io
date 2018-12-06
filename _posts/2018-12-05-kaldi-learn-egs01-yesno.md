@@ -12,6 +12,8 @@ tags:
 
 **运行yesno例子**
 
+https://blog.csdn.net/nsh119/article/details/81587462
+
 ###### 0.说明
 egs/yesno/s5目录下run.sh为示例运行总脚本，本文档记录对此脚本拆解运行的详细过程。
 
