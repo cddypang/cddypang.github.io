@@ -102,6 +102,11 @@ extra_questions.txt -- (用于构建决策树的问题集，可以为空)包含�
 ![07](../img/kaldi-learn/kaldi-prepare_lang_sh-description-07.jpg)
 
 
+**注意：MAC环境中因没有X11环境，可能导致png，jpg图片显示不出来。MAC环境下使用fstdraw命令画图可以输出svg矢量图**
+
+**fstdraw --isymbols=phones.txt --osymbols=words.txt L.fst | dot -Tsvg -o L.svg**
+
+
 ###### 4.构造字典fst模型(L.fst)
 
 
