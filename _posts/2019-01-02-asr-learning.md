@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      asr-learning
-subtitle:    "\"ASR Learning Material\""
+title:      ASR Learning Material
+subtitle:    "\"asr learning\""
 date:       2019-01-02
 author:     PGJ
 header-img: img/post-bg-2015.jpg
