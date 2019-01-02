@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      asr learning
+title:      asr-learning
 subtitle:    "\"ASR Learning Material\""
 date:       2019-01-02
 author:     PGJ
