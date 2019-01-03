@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      archlinux虚拟云主机环境搭建(一)
-subtitle:   --配置远程图形界面环境
+subtitle:   --archlinux-xfce4-lightdm-xrdp
 date:       2018-08-06
 author:     PGJ
 header-img: img/post-bg-2015.jpg
