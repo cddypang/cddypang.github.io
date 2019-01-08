@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      kaldi-learn-egs01-yesno
-subtitle:    
+title:      kaldi-learn-egs01-yesno(1)
+subtitle:   “数据准备，生成L.fst G.fst”
 date:       2018-12-05
 author:     PGJ
 header-img: img/post-bg-2015.jpg
@@ -92,6 +92,22 @@ $utils/prepare_lang.sh --position-dependent-phones false data/local/dict "<SIL>"
 
 1> cp $srcdir/lexiconp.txt $tmpdir/lexiconp.txt
 
+2> paste -d' ' $tmpdir/phones $tmpdir/phones > $tmpdir/phone_map.txt
+
+生成data/local/lang/phone_map.txt;
+
+3> share_silence_phones false;
+
+   **此处大致是说HMM状态共享及pdf-class(混合高斯模型)分裂问题，自己没看懂，留着以后慢慢学习!!!**
+
+3-1> cat $srcdir/{,non}silence_phones.txt | utils/apply_map.pl $tmpdir/phone_map.txt > $dir/phones/sets.txt
+
+    输出data/lang/phones/sets.txt，内容为包括静音的因素列表(SIL,Y,N)；
+
+3-2> cat $dir/phones/sets.txt | awk '{print "shared", "split", $0;}' > $dir/phones/roots.txt
+
+    输出data/lang/phones/roots.txt，内容为不同因素间的HMM状态共享及决策树分裂配置列表，具体介绍参看下面4.1部分的图片内容；
+
 
 
 ####### 4.1
@@ -128,7 +144,10 @@ extra_questions.txt -- (用于构建决策树的问题集，可以为空)包含�
 **fstdraw --isymbols=phones.txt --osymbols=words.txt L.fst | dot -Tsvg -o L.svg**
 
 
-###### 4.构造字典fst模型(L.fst)
+###### 5.构造语言模型(G.fst)
 
+arpa2fst --disambig-symbol=#0 --read-symbol-table=$test/words.txt input/task.arpabo $test/G.fst
 
+最终生成G.fst文件。
 
+至此，数据准备阶段基本完成，下一阶段开始进行音频特征提取处理。
